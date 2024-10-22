@@ -1,6 +1,10 @@
 body {
     font-family: 'Assistant', sans-serif;
-    background: linear-gradient(135deg, #001f3f, #003366);
+    /* background: linear-gradient(135deg, #001f3f, #003366); */
+    background-image: url('../img/background.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
     margin: 0;
     padding: 0;
     display: flex;
@@ -43,7 +47,7 @@ h2 {
 }
 
 .login-btn {
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -51,11 +55,14 @@ h2 {
     color: #ffffff;
     font-size: 16px;
     cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px; 
 }
 
 .login-btn:hover {
     background: #357ae8;
 }
+
 
 /* Efek futuristik tambahan */
 @keyframes glow {
