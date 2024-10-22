@@ -39,6 +39,7 @@
   <title>Admin | Bullworth Academy</title>
   <link rel="icon" type="image/png/jpg" href="../img/icon.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
 <body>
   <header>
