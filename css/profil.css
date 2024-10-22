@@ -1,0 +1,131 @@
+body {
+    font-family: 'Assistant', sans-serif;
+    background-image: url('../img/background.png');
+    background-size: cover; /* Mengatur gambar agar sesuai dengan ukuran aslinya */
+    background-repeat: no-repeat; /* Mencegah gambar diulang */
+    background-position: center; /* Memposisikan gambar di tengah */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+}
+
+header h1 {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    padding: 10px 15px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+header ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
+
+.section {
+    flex: 1;
+    padding: 50px 0;
+}
+
+.box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    margin-top: 30px;
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.input-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #4a90e2;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #357ae8;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Efek futuristik tambahan */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
+    }
+}
+
+.box {
+    animation: glow 3s infinite;
+}
+
