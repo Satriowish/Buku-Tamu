@@ -1,5 +1,4 @@
 <?php 
-  // Finally mari alhamdulillah
   session_start() ;
   session_destroy() ; 
   echo  "<script>

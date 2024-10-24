@@ -57,18 +57,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Tamu</title>
+    <title>Admin | Edit Tamu</title>
     <link rel="icon" type="image/png/jpg" href="../../img/icon.png" sizes="32x32">
-    <link rel="stylesheet" href="../../css/edit-tamu.css">
+    <link rel="stylesheet" href="../../css/page-edit-tamu.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1><a href="../dashboard.php">Edit Tamu</a></h1>
+            <h1>Edit Tamu Bullworth</a></h1>
             <ul>
                 <li><a href="../dashboard.php">Dashboard</a></li>
                 <li><a href="../profil.php">Profil</a></li>
-                <li><a href="../history.php">History</a></li>
+                <li><a href="../history.php">Riwayat</a></li>
             </ul>
         </div>
     </header>

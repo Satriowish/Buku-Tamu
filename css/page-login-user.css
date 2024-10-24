@@ -1,8 +1,7 @@
 body {
     font-family: 'Assistant', sans-serif;
-    /* background: linear-gradient(135deg, #001f3f, #003366); */
-    background-image: url('../img/background.png');
-    background-size: cover; 
+    background-image: url('../img/bg1.webp');
+    background-size: 170%; 
     background-repeat: no-repeat; 
     background-position: center; 
     margin: 0;
@@ -14,6 +13,10 @@ body {
 }
 
 
+*{
+    box-sizing: border-box;
+}
+
 .box-login {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -21,6 +24,7 @@ body {
     padding: 40px;
     width: 300px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: glow 3s infinite;
 }
 
 h2 {
@@ -32,7 +36,7 @@ h2 {
 }
 
 .input-control {
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     margin-bottom: 20px;
     border: none;
@@ -62,22 +66,3 @@ h2 {
 .login-btn:hover {
     background: #357ae8;
 }
-
-
-/* Efek futuristik tambahan */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-}
-
-.box-login {
-    animation: glow 3s infinite;
-}
-

@@ -1,6 +1,6 @@
 body {
     font-family: 'Assistant', sans-serif;
-    background-image: url('../img/background.png');
+    background-image: url('../img/bg1.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -17,7 +17,6 @@ body {
     margin: 0 auto;
 }
 
-/* Header efek blur dan agak transparan anjay */
 header {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -61,7 +60,6 @@ header ul li a:hover {
     padding: 50px 0;
 }
 
-/* Box dengan efek blur dan shadow */
 .box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
@@ -78,7 +76,6 @@ h3, h4 {
     font-family: 'Playfair Display', serif;
 }
 
-/* form input */
 .detail-item {
     margin-bottom: 20px;
     display: flex;
@@ -94,13 +91,12 @@ h3, h4 {
     flex: 0 0 30%; 
 }
 
-/* hasil inputan */
 .detail-item input, .detail-item textarea {
     width: 65%; 
     padding: 12px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    background-color: rgba(255, 255, 255, 0.1); 
     color: #ffffff;
     font-size: 1.1em;
 }
@@ -110,7 +106,6 @@ h3, h4 {
     resize: none; 
 }
 
-/* tombol kembali */
 .input-control {
     text-align: center;
     margin-top: 30px;
@@ -132,19 +127,6 @@ button[type="button"]:hover {
     background-color: #31b0d5;
 }
 
-/* Glow effect animation */
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-    50% {
-        box-shadow: 0 0 20px rgba(74, 144, 226, 0.8);
-    }
-    100% {
-        box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-}
-
 a {
     text-decoration: none;
     color: inherit;
@@ -155,7 +137,6 @@ table a {
     color: inherit;
 }
 
-/* footer */
 .footer {
     margin-top: auto;  
     background-color: rgba(0, 0, 0, 0.7);  
