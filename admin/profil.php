@@ -5,12 +5,9 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] !== true) {
     header('Location: login.php');
     exit();
 }
-
 $query = sqlsrv_query($conn, "SELECT * FROM tb_admin WHERE admin_id = '" . $_SESSION['id'] . "'");
 $d = sqlsrv_fetch_object($query);
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
