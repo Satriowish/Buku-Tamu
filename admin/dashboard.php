@@ -4,27 +4,21 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     header("Location: login.php");
     exit();
 }
-
 include('../database/konekdb.php'); 
-
-// Cek apakah form disubmit
 if (isset($_POST['submit'])) {
-    // Ambil data dari form
     $tamu_name = $_POST['tamu_name'];
     $keterangan = $_POST['keterangan'];  
     $tamu_telp = $_POST['tamu_telp'];
     $tamu_email = $_POST['tamu_email'];
     $tamu_address = $_POST['tamu_address'];
     $kategori_id = $_POST['kategori_id'];
-
-    // Query untuk menambahkan data tamu
-    $query = "INSERT INTO tb_tamu (tamu_name, keterangan, tamu_telp, tamu_email, tamu_address, kategori_id, admin_id) 
-              VALUES ('$tamu_name', '$keterangan', '$tamu_telp', '$tamu_email', '$tamu_address', '$kategori_id', '".$_SESSION['adn_global']->admin_id."')";
-
-    // Eksekusi query
+    $query = "INSERT INTO tb_tamu 
+              (tamu_name, keterangan, tamu_telp, 
+              tamu_email, tamu_address, kategori_id, admin_id) 
+              VALUES ('$tamu_name', '$keterangan', '$tamu_telp', 
+              '$tamu_email', '$tamu_address', '$kategori_id', 
+              '".$_SESSION['adn_global']->admin_id."')";
     $tamu_query = sqlsrv_query($conn, $query);
-
-    // Redirect ke dashboard
     if ($tamu_query) {
         header("Location: dashboard.php");
     } else {
@@ -33,8 +27,6 @@ if (isset($_POST['submit'])) {
     exit();
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
