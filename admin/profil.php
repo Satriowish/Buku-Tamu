@@ -14,7 +14,7 @@ $d = sqlsrv_fetch_object($query);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title style="padding: 10px 0px;">Admin | Quest Bullworth</title>
+  <title style="padding: 10px 0px;">Profil | Guest Bullworth</title>
   <link rel="icon" type="image/png/jpg" href="../img/icon.png" sizes="32x32">
   <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/page-profil.css">
@@ -22,7 +22,7 @@ $d = sqlsrv_fetch_object($query);
 <body>
   <header>
     <div class="container">
-      <h1><a href="dashboard.php">Quest Bullworth</a></h1>
+      <h1><a href="dashboard.php">Guest Bullworth</a></h1>
       <ul>
         <li><a href="dashboard.php">Dashboard</a></li>
         <li><a href="history.php">Riwayat</a></li>
