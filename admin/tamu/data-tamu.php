@@ -4,17 +4,10 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     header("Location: login.php");
     exit();
 }
-
 include('../../database/konekdb.php'); 
-
-// Mengambil tamu_id dari URL
 $tamu_id = $_GET['tamu_id'] ?? '';
-
-// Mengambil data tamu berdasarkan tamu_id
 $query = "SELECT * FROM tb_tamu WHERE tamu_id = '$tamu_id' AND admin_id = '".$_SESSION['adn_global']->admin_id."'";
 $tamu_query = sqlsrv_query($conn, $query);
-
-// Mengecek apakah tamu ditemukan
 if (sqlsrv_has_rows($tamu_query)) {
     $row = sqlsrv_fetch_array($tamu_query, SQLSRV_FETCH_ASSOC);
 } else {
@@ -22,8 +15,6 @@ if (sqlsrv_has_rows($tamu_query)) {
     exit();
 }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,6 +26,7 @@ if (sqlsrv_has_rows($tamu_query)) {
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/page-data-tamu.css">
 </head>
+
 <body>
     <header>
         <div class="container">
