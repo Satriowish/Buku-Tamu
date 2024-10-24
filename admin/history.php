@@ -4,22 +4,15 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     echo '<script>window.location="login.php"</script>';
 }
 include('../database/konekdb.php'); 
-
 $admin_id = $_SESSION['adn_global']->admin_id;
-
-// Query untuk mengambil data tamu
 $tamu_query = sqlsrv_query($conn, 
 "SELECT t.tamu_id, t.tamu_name, 
         t.keterangan, t.tamu_address, 
         t.waktu_kedatangan FROM tb_tamu t 
         WHERE t.admin_id = '$admin_id'");
-
-// Cek apakah berhasil
 if (!$tamu_query) {
     die("Error pada query SQL: " . print_r(sqlsrv_errors(), true));
 }
-
-// Hapus tamu jika ada ID yang diterima
 if (isset($_GET['hapus_id'])) {
     $hapus_id = $_GET['hapus_id'];
     $delete_result = sqlsrv_query($conn, "DELETE FROM tb_tamu WHERE tamu_id = '$hapus_id'");
@@ -31,7 +24,6 @@ if (isset($_GET['hapus_id'])) {
     }
 }
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
