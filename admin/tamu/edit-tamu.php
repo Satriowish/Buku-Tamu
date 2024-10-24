@@ -5,19 +5,12 @@ if ($_SESSION['status_login'] != true) {
     exit();
 }
 include('../../database/konekdb.php'); 
-
-// mengambil tamu_id dari URL
 $tamu_id = isset($_GET['tamu_id']) ? $_GET['tamu_id'] : '';
-
-// mengambil data tamu berdasarkan tamu_id
 $query = "SELECT t.tamu_id, t.tamu_name, t.tamu_address, t.keterangan, t.waktu_kedatangan, t.tamu_telp, t.tamu_email, t.kategori_id
 FROM tb_tamu t
 WHERE t.tamu_id = ? AND t.admin_id = ?";
-
 $params = array($tamu_id, $_SESSION['adn_global']->admin_id);
 $tamu_query = sqlsrv_query($conn, $query, $params);
-
-// mengecek tamu
 if (sqlsrv_has_rows($tamu_query)) {
     $row = sqlsrv_fetch_array($tamu_query, SQLSRV_FETCH_ASSOC);
 } else {
@@ -25,7 +18,6 @@ if (sqlsrv_has_rows($tamu_query)) {
     exit();
 }
 
-// update data tamu 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tamu_name = $_POST['tamu_name'];
     $tamu_address = $_POST['tamu_address'];
