@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Bullworth Academy</title>
     <link rel="icon" type="image/png/jpg" href="../img/icon.png" sizes="32x32">
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/page-dashboard.css">
 </head>
 <body>

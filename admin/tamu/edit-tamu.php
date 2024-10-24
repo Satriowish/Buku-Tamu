@@ -59,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin | Edit Tamu</title>
     <link rel="icon" type="image/png/jpg" href="../../img/icon.png" sizes="32x32">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../css/page-edit-tamu.css">
 </head>
 <body>
