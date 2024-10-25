@@ -4,23 +4,18 @@ if (!isset($_SESSION['status_login']) || $_SESSION['status_login'] != true) {
     header("Location: login.php");
     exit();
 }
-
 include('../../database/konekdb.php'); 
-
 $tamu_id = $_GET['tamu_id'] ?? '';
 $query = "SELECT t.tamu_id, t.tamu_name, t.tamu_address, t.keterangan, t.waktu_kedatangan, t.tamu_telp, t.tamu_email, t.kategori_id
 FROM tb_tamu t
 WHERE t.tamu_id = ? AND t.admin_id = ?";
 $params = array($tamu_id, $_SESSION['adn_global']->admin_id);
 $tamu_query = sqlsrv_query($conn, $query, $params);
-
 if (!sqlsrv_has_rows($tamu_query)) {
     header("Location: ../history.php");
     exit();
 }
-
 $row = sqlsrv_fetch_array($tamu_query, SQLSRV_FETCH_ASSOC);
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $tamu_name = $_POST['tamu_name'];
     $tamu_address = $_POST['tamu_address'];
@@ -67,7 +62,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </ul>
         </div>
     </header>
-
     <div class="section">
         <div class="container">
             <h3>Edit Data Tamu</h3>
@@ -104,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     ?>
                    </select>
                  </select>
-                 
+
                     <!-- submit -->
                     <input type="submit" value="Simpan Perubahan" class="login-btn">
                 </form>
